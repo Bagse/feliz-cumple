@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#150529">
+  <meta name="description" content="¡Feliz Cumpleaños Nashlie! Una fiesta virtual con pastel de fresa, tequila y muchas sorpresas.">
+
+  <title>¡Feliz Cumpleaños Nashlie!</title>
+
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+
+  <meta property="og:title" content="¡Feliz Cumpleaños Nashlie!">
+  <meta property="og:description" content="Una fiesta virtual con pastel de fresa, tequila, modo baile y muchas sorpresas. ¡Toca para empezar la fiesta!">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/favicon.png">
+  <meta property="og:url" content="https://example.com">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="¡Feliz Cumpleaños Nashlie!">
+  <meta name="twitter:description" content="Una fiesta virtual con pastel de fresa, tequila, modo baile y muchas sorpresas. ¡Toca para empezar la fiesta!">
+  <meta name="twitter:image" content="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Estrellas de fondo -->
+  <div class="stars" aria-hidden="true">
+    <span class="star s1"></span><span class="star s2"></span><span class="star s3"></span>
+    <span class="star s4"></span><span class="star s5"></span><span class="star s6"></span>
+    <span class="star s7"></span><span class="star s8"></span><span class="star s9"></span>
+    <span class="star s10"></span><span class="star s11"></span><span class="star s12"></span>
+    <span class="star s13"></span><span class="star s14"></span><span class="star s15"></span>
+    <span class="star s16"></span><span class="star s17"></span><span class="star s18"></span>
+  </div>
+
+  <!-- Luces de discoteca -->
+  <div class="disco" aria-hidden="true">
+    <span class="l1"></span>
+    <span class="l2"></span>
+    <span class="l3"></span>
+    <span class="l4"></span>
+    <span class="l5"></span>
+  </div>
+
+  <!-- Banderines -->
+  <div class="garland" aria-hidden="true">
+    <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+  </div>
+
+  <!-- Globos -->
+  <div class="balloons" aria-hidden="true">
+    <img class="balloon b1" src="assets/balloon.svg" alt="" draggable="false">
+    <img class="balloon b2" src="assets/balloon.svg" alt="" draggable="false">
+    <img class="balloon b3" src="assets/balloon.svg" alt="" draggable="false">
+    <img class="balloon b4" src="assets/balloon.svg" alt="" draggable="false">
+    <img class="balloon b5" src="assets/balloon.svg" alt="" draggable="false">
+    <img class="balloon b6" src="assets/balloon.svg" alt="" draggable="false">
+    <img class="balloon b7" src="assets/balloon.svg" alt="" draggable="false">
+  </div>
+
+  <!-- Bola de espejos (Modo Baile) -->
+  <div class="disco-ball" aria-hidden="true">
+    <span class="db-line"></span>
+    <span class="db-core"></span>
+  </div>
+  <div class="db-rays" aria-hidden="true"></div>
+
+  <!-- Escenario principal -->
+  <main class="stage">
+    <h1 id="title" class="title">¡Feliz Cumpleaños <span class="name">Nashlie!</span></h1>
+
+    <section class="scene" aria-label="Pastel de fresa con velas, tequila y shots">
+      <div class="cake-zone">
+        <div class="cake">
+          <div class="candles">
+            <button class="candle c1" type="button" aria-label="Vela 1: tócala para apagarla">
+              <span class="flame"></span><span class="smoke"></span>
+            </button>
+            <button class="candle c2" type="button" aria-label="Vela 2: tócala para apagarla">
+              <span class="flame"></span><span class="smoke"></span>
+            </button>
+            <button class="candle c3" type="button" aria-label="Vela 3: tócala para apagarla">
+              <span class="flame"></span><span class="smoke"></span>
+            </button>
+            <button class="candle c4" type="button" aria-label="Vela 4: tócala para apagarla">
+              <span class="flame"></span><span class="smoke"></span>
+            </button>
+          </div>
+
+          <div class="tier tier-top">
+            <div class="berries" aria-hidden="true">
+              <span class="berry"></span><span class="berry"></span><span class="berry"></span><span class="berry"></span><span class="berry"></span>
+            </div>
+          </div>
+          <div class="tier tier-bottom"></div>
+          <div class="plate"></div>
+          <div class="garnish" aria-hidden="true">
+            <span class="cberry"></span><span class="berry gb"></span><span class="cberry"></span><span class="cberry"></span>
+          </div>
+          <div class="cake-shadow"></div>
+        </div>
+      </div>
+
+      <div class="drinks" aria-hidden="true">
+        <div class="bottle">
+          <span class="cap"></span>
+          <span class="neck"></span>
+          <span class="body">
+            <span class="label"><b>TEQUILA</b><i>100% agave</i></span>
+          </span>
+        </div>
+        <div class="shots">
+          <span class="shot"></span>
+          <span class="shot"></span>
+          <span class="shot"></span>
+          <span class="shot"></span>
+        </div>
+      </div>
+    </section>
+
+    <p id="wish" class="wish" role="status">¡Pide un deseo, Nashlie!</p>
+
+    <section class="letter" aria-label="Mensaje personalizado">
+      <p>Hoy el mundo se ve más bonito porque existes, Nashlie.</p>
+      <p>Que este nuevo año venga lleno de risas, aventuras y todo lo que tu corazón desea.</p>
+      <p>¡Te mereces toda la felicidad del universo!</p>
+      <span class="letter-heart" aria-hidden="true"></span>
+    </section>
+  </main>
+
+  <!-- Botón Modo Baile -->
+  <button id="dance-btn" class="dance-btn" type="button" aria-pressed="false">
+    <span class="db-label">Modo Baile</span>
+  </button>
+
+  <!-- Nutria mascota -->
+  <div class="otter-zone">
+    <div class="otter" id="otter" role="button" tabindex="0" aria-label="Nutria: tócala para verla chapotear">
+      <span class="otter-tooltip" aria-hidden="true">¡Tócame!</span>
+      <span class="ripple"></span>
+      <img class="o-img" src="assets/otter.svg" alt="" draggable="false">
+      <img class="o-straw" src="assets/strawberry.svg" alt="" draggable="false">
+      <span class="splash sp1"></span>
+      <span class="splash sp2"></span>
+      <span class="splash sp3"></span>
+    </div>
+  </div>
+
+  <!-- Caja de regalo (intro) -->
+  <div id="giftbox" class="giftbox" aria-hidden="true">
+    <div class="gb-lid"></div>
+    <div class="gb-body"></div>
+  </div>
+
+  <!-- Pantalla de inicio (activa el audio) -->
+  <div id="start-screen" class="start-screen">
+    <div class="start-card">
+      <div class="start-cupcake" aria-hidden="true">
+        <span class="sc-cherry"></span>
+        <span class="sc-frosting"></span>
+        <span class="sc-cup"></span>
+      </div>
+      <p class="start-sub">Una fiesta te está esperando</p>
+      <button id="start-btn" class="start-btn" type="button">Toca para empezar la fiesta</button>
+      <p class="start-hint">Activa tu sonido</p>
+    </div>
+  </div>
+
+  <audio id="bg-music" src="music/amistad.webm" loop preload="auto"></audio>
+  <audio id="party-music" src="music/fantasia.webm" loop preload="auto"></audio>
+  <div id="toast" class="toast" role="status"></div>
+
+  <footer class="credit">
+    <span>Hecho por Brian</span>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

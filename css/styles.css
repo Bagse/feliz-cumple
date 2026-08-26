@@ -656,6 +656,12 @@ body.opened .drinks {
   box-shadow: inset 0 .4em .5em rgba(255,255,220,.5);
 }
 
+/* ---------- Botones de acción ---------- */
+
+.action-buttons {
+  display: contents;
+}
+
 /* ---------- Botón Modo Baile ---------- */
 
 .dance-btn {
@@ -1236,8 +1242,40 @@ body.party .disco {
   .scene { gap: 3em 2.5em; }
   .drinks { gap: 1.8em; }
   .b5, .b7 { display: none; }
-  .dance-btn { right: .8rem; bottom: .8rem; padding: .7em 1.05em; font-size: .82rem; }
-  .otter-zone { left: 0; bottom: 3%; font-size: calc(var(--u) * .78); }
+
+  .action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: .7rem;
+    order: 3;
+  }
+
+  .dance-btn {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    padding: .7em 1.05em;
+    font-size: .82rem;
+  }
+
+  .music-btn {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    width: 38px;
+    height: 38px;
+  }
+
+  .otter-zone {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    font-size: calc(var(--u) * .78);
+    align-self: center;
+    order: 4;
+  }
+
+  .otter { width: 80px; }
 }
 
 /* Pantallas cortas: compacta el escenario para que nada se encime */
@@ -1381,6 +1419,50 @@ body.party .disco {
   30%      { transform: scale(1); }
   45%      { transform: scale(1.15); }
   60%      { transform: scale(1); }
+}
+
+/* ---------- Botón Pausa/Play Música ---------- */
+
+.music-btn {
+  position: fixed;
+  right: 1.1rem;
+  bottom: 4.2rem;
+  z-index: 20;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.12);
+  border: 1.5px solid rgba(255,255,255,.25);
+  backdrop-filter: blur(6px);
+  color: #fff;
+  transition: transform .2s, background .3s, border-color .3s;
+}
+
+.music-btn:hover {
+  transform: scale(1.1);
+  background: rgba(255,255,255,.22);
+}
+
+.music-btn:active { transform: scale(.94); }
+
+.music-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.music-icon--play { display: none; }
+
+.music-btn.paused .music-icon--pause { display: none; }
+.music-btn.paused .music-icon--play { display: block; }
+
+.music-btn.paused {
+  background: rgba(255,93,162,.25);
+  border-color: rgba(255,93,162,.5);
 }
 
 /* ---------- Tooltip nutria ---------- */

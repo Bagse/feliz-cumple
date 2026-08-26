@@ -15,6 +15,7 @@
   const candles = $$('.candle');
   const otter = $('#otter');
   const danceBtn = $('#dance-btn');
+  const musicBtn = $('#music-btn');
   const cakeZone = $('.cake-zone');
   const drinksEl = $('.drinks');
   const giftbox = $('#giftbox');
@@ -162,6 +163,20 @@
     if (on) fire({ particleCount: 60, spread: 90, startVelocity: 30, origin: { x: .5, y: .2 } });
   });
 
+  /* ---------- Pausa / Play Música ---------- */
+
+  musicBtn.addEventListener('click', () => {
+    const paused = musicBtn.classList.toggle('paused');
+    musicBtn.setAttribute('aria-pressed', String(paused));
+    musicBtn.setAttribute('aria-label', paused ? 'Reanudar música' : 'Pausar música');
+    const active = body.classList.contains('party') ? partyAudio : audio;
+    if (paused) {
+      active.pause();
+    } else {
+      active.play().catch(() => {});
+    }
+  });
+
   /* ---------- Inicio de la fiesta ---------- */
 
   function startExperience() {
@@ -225,4 +240,28 @@
   });
 
   startBtn.addEventListener('click', startExperience);
+
+  /* ---------- Pausar música al salir de la pestaña ---------- */
+
+  let wasPlayingBeforeHidden = false;
+
+  document.addEventListener('visibilitychange', () => {
+    if (!started) return;
+    if (musicBtn.classList.contains('paused')) return;
+
+    if (document.hidden) {
+      wasPlayingBeforeHidden = !audio.paused || !partyAudio.paused;
+      audio.pause();
+      partyAudio.pause();
+    } else if (wasPlayingBeforeHidden) {
+      const active = body.classList.contains('party') ? partyAudio : audio;
+      active.play().catch(() => {});
+      wasPlayingBeforeHidden = false;
+    }
+  });
+
+  window.addEventListener('pagehide', () => {
+    audio.pause();
+    partyAudio.pause();
+  });
 })();

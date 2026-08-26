@@ -14,7 +14,7 @@
   <meta property="og:description" content="Una fiesta virtual con pastel de fresa, tequila, modo baile y muchas sorpresas. ¡Toca para empezar la fiesta!">
   <meta property="og:type" content="website">
   <meta property="og:image" content="assets/favicon.png">
-  <meta property="og:url" content="https://example.com">
+  <meta property="og:url" content="https://feliz-cumple-99.netlify.app">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="¡Feliz Cumpleaños Nashlie!">
@@ -122,6 +122,17 @@
       </div>
     </section>
 
+    <!-- Botones (desktop: fixed, mobile: inline) -->
+    <div class="action-buttons">
+      <button id="dance-btn" class="dance-btn" type="button" aria-pressed="false">
+        <span class="db-label">Modo Baile</span>
+      </button>
+      <button id="music-btn" class="music-btn" type="button" aria-label="Pausar música" aria-pressed="false">
+        <svg class="music-icon music-icon--pause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="4" width="4" height="16" rx="1"/><rect x="14" y="4" width="4" height="16" rx="1"/></svg>
+        <svg class="music-icon music-icon--play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.14v13.72a1 1 0 001.5.86l11.04-6.86a1 1 0 000-1.72L9.5 4.28A1 1 0 008 5.14z"/></svg>
+      </button>
+    </div>
+
     <p id="wish" class="wish" role="status">¡Pide un deseo, Nashlie!</p>
 
     <section class="letter" aria-label="Mensaje personalizado">
@@ -130,25 +141,20 @@
       <p>¡Te mereces toda la felicidad del universo!</p>
       <span class="letter-heart" aria-hidden="true"></span>
     </section>
-  </main>
 
-  <!-- Botón Modo Baile -->
-  <button id="dance-btn" class="dance-btn" type="button" aria-pressed="false">
-    <span class="db-label">Modo Baile</span>
-  </button>
-
-  <!-- Nutria mascota -->
-  <div class="otter-zone">
-    <div class="otter" id="otter" role="button" tabindex="0" aria-label="Nutria: tócala para verla chapotear">
-      <span class="otter-tooltip" aria-hidden="true">¡Tócame!</span>
-      <span class="ripple"></span>
-      <img class="o-img" src="assets/otter.svg" alt="" draggable="false">
-      <img class="o-straw" src="assets/strawberry.svg" alt="" draggable="false">
-      <span class="splash sp1"></span>
-      <span class="splash sp2"></span>
-      <span class="splash sp3"></span>
+    <!-- Nutria (desktop: fixed, mobile: inline) -->
+    <div class="otter-zone">
+      <div class="otter" id="otter" role="button" tabindex="0" aria-label="Nutria: tócala para verla chapotear">
+        <span class="otter-tooltip" aria-hidden="true">¡Tócame!</span>
+        <span class="ripple"></span>
+        <img class="o-img" src="assets/otter.svg" alt="" draggable="false">
+        <img class="o-straw" src="assets/strawberry.svg" alt="" draggable="false">
+        <span class="splash sp1"></span>
+        <span class="splash sp2"></span>
+        <span class="splash sp3"></span>
+      </div>
     </div>
-  </div>
+  </main>
 
   <!-- Caja de regalo (intro) -->
   <div id="giftbox" class="giftbox" aria-hidden="true">
